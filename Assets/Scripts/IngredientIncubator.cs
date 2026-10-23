@@ -7,7 +7,7 @@ public class IngredientIncubator : MonoBehaviour
     [SerializeField]private int[] Ingredientslist = new int[3];
     private int IngredientId = 0;
 
-    private void Update()
+    private void Start()
     {
         GameEvents.current.onIngredientPutinDaCauldron += OnIngredientPut;
     }

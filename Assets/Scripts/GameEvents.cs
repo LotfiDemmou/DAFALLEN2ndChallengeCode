@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class GameEvents : MonoBehaviour
@@ -18,6 +19,7 @@ public class GameEvents : MonoBehaviour
         if(onIngredientPutinDaCauldron != null);
         {
             onIngredientPutinDaCauldron();
+            Debug.Log("event activated");
         }
     }
 
