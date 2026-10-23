@@ -3,7 +3,8 @@ using UnityEngine.InputSystem;
 
 public class Ingredient : MonoBehaviour
 {
-    [SerializeField] private string IngredientName;
+    public string IngredientName;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
     private bool dragging;
     private Vector3 offset;
@@ -18,6 +19,7 @@ public class Ingredient : MonoBehaviour
 
     private void OnMouseDown()
     {
+        gameObject.layer = LayerMask.NameToLayer("TransportLayer");
         dragging = true;
         offset = transform.position - MouseWorld(); // no jump to cursor
     }
@@ -29,6 +31,10 @@ public class Ingredient : MonoBehaviour
         if (Mouse.current.leftButton.isPressed)
             transform.position = MouseWorld() + offset;
         else
+        {
             dragging = false;
+            gameObject.layer = LayerMask.NameToLayer("Default");
+        }
+
     }
 }
