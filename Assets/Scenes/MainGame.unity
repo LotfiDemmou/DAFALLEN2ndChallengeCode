@@ -509,6 +509,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1048523758}
+  - component: {fileID: 1048523759}
   m_Layer: 0
   m_Name: PotionMixer
   m_TagString: Untagged
@@ -531,6 +532,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 588172285}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1048523759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048523757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f431262130bd640bdccedf3330210a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PotionMixer
+  Potion: 0
 --- !u!4 &1193707865 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4481699041088485312, guid: 03ed6bec98b214b49a5692e9660ddae5, type: 3}
