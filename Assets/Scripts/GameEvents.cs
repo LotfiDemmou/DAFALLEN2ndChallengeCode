@@ -15,6 +15,7 @@ public class GameEvents : MonoBehaviour
 
     public event Action<string> onIngredientPutinDaCauldron;
     public event Action<string[]> onAllIngredientsinDaCauldron;
+    public event Action<int> onPotionOutPut;
 
     public  void IngredientPutinDaCauldron(string IngredientName)
     {
@@ -34,4 +35,12 @@ public class GameEvents : MonoBehaviour
         }
     }
 
+            public  void PotionOutPut(int Potion)
+    {
+        if(onPotionOutPut != null);
+        {
+            onPotionOutPut?.Invoke(Potion);
+            Debug.Log("event2 activated");
+        }
+    }
 }

@@ -7,6 +7,7 @@ public class PotionMixer : MonoBehaviour
 {
     
     public int Potion;
+    public GameObject UiController;
     
     
         private void Start()
@@ -35,5 +36,8 @@ public class PotionMixer : MonoBehaviour
         else
             Potion = 0;
         Debug.Log(Potion);
+
+        UiController.SetActive(true);
+        GameEvents.current.PotionOutPut(Potion);
     }
 }
