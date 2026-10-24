@@ -14,12 +14,23 @@ public class GameEvents : MonoBehaviour
     }
 
     public event Action<string> onIngredientPutinDaCauldron;
+    public event Action<string[]> onAllIngredientsinDaCauldron;
+
     public  void IngredientPutinDaCauldron(string IngredientName)
     {
         if(onIngredientPutinDaCauldron != null);
         {
             onIngredientPutinDaCauldron?.Invoke(IngredientName);
-            Debug.Log("event activated");
+            Debug.Log("event1 activated");
+        }
+    }
+
+        public  void AllIngredientsinDaCauldron(string[] Ingredients)
+    {
+        if(onAllIngredientsinDaCauldron != null);
+        {
+            onAllIngredientsinDaCauldron?.Invoke(Ingredients);
+            Debug.Log("event2 activated");
         }
     }
 
